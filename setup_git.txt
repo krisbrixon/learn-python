@@ -1,0 +1,42 @@
+Setup:
+
+Install Git
+sudo apt-get install git
+
+Set Name and Email:
+$ git config --global user.name "[First Name] [Last Name]"
+$ git config --global user.email "[email address]"
+
+Set command line editor (to avoid vi):
+$ git config --global core.editor nano
+
+Setup a place for all git stuff:
+$ cd ~
+$ mkdir git
+$ cd git
+
+Setup a directory for the repository
+$ mkdir learn-python
+$ cd learn-python
+
+Load/clone the repository into the new directory
+$ git clone https://github.com/krisbrixon/learn-python.git
+
+Testing:
+$ touch myfristfile.txt
+$ git status
+$ git add -A
+$ git commit -m "Adding my first file to the repository"
+$ git status
+$ git push
+
+Set this setting so the push message is shorter, not sure the point.
+$git config --global push.default simple
+
+Set the repository to store my github login
+$ git config credential.helper store
+$ git push https://github.com/krisbrixon/learn-python.git
+
+Set the password save to timeout after 60 days:
+$ git config --global credential.helper 'cache --timeout 5184000'
+
