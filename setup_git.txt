@@ -40,3 +40,6 @@ $ git push https://github.com/krisbrixon/learn-python.git
 Set the password save to timeout after 60 days:
 $ git config --global credential.helper 'cache --timeout 5184000'
 
+Future logins to the machine to pick up changes to the repository:
+$ git pull
+
